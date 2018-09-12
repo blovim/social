@@ -1,13 +1,11 @@
 /***********************************************
-* #### jQuery-Youtube-Channels-Playlist ####
-* Coded by Ican Bachors 2014.
-* http://ibacor.com/labs/jquery-youtube-channels-playlist/
-* Updates will be posted to this site.
+* LIBRARY TITLE: Youtube Channels JQuery
+* DEVELOPED BY: Blovim Inc 2010.
+* URL: https://www.blovim.com/
+* VERSION: 18/1089
 ***********************************************/
 
-var channels_name='GaranCom', //example
-channels_title='Garantías Comunitarias',
-apikey='AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0'; //YOUR GOOGLE API KEY
+var apikey='AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0'; //YOUR GOOGLE API KEY
 
 $.ajax({
     url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername=' + channels_name + '&key=' + apikey,
