@@ -1,6 +1,7 @@
 /***********************************************
 * LIBRARY TITLE: Youtube Channels JQuery
 * DEVELOPED BY: Blovim Inc 2010.
+* 
 * URL: https://www.blovim.com/
 * VERSION: 18/1089
 ***********************************************/
