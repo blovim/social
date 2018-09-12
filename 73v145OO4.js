@@ -26,7 +26,6 @@ function youtube_video_list(f, g, h, j, k, l) {
         dataType: 'json'
     }).done(function(c) {
         var d = '';
-        d += '<div class="ibacordotcom-vid-top"><span class="ibacordotcom-nav-title">' + j + '</span><br><span class="ibacordotcom-vid-by">Por <a href="https://www.youtube.com/user/' + l + '" target="_BLANK">' + l + '</a></span><hr>';
         d += '<i class="fa fa-fast-backward ibacordotcom_vid_prev" title="Previous videos"></i> ';
         d += '<i class="fa fa-fast-forward ibacordotcom_vid_next" title="Next videos"></i></div><div class="ibacordotcom-vid-bottom">';
         $.each(c.items, function(i, a) {
