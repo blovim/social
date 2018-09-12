@@ -27,7 +27,7 @@ function youtube_video_list(f, g, h, j, k, l) {
     }).done(function(c) {
         var d = '';
         d += '<div class="gc_tv_top"><i class="ion-chevron-left ibacordotcom_vid_prev" title="Previous videos"></i> ';
-        d += '<i class="io-chevron-right ibacordotcom_vid_next" title="Next videos"></i></div><div class="gc_tv_bottom">';
+        d += '<i class="ion-chevron-right ibacordotcom_vid_next" title="Next videos"></i></div><div class="gc_tv_bottom">';
         $.each(c.items, function(i, a) {
             var b = c.items[i].snippet.resourceId.videoId;
             getwaktu(b, i, g);
