@@ -82,7 +82,7 @@ function youtube_det(c, d, e, g) {
         b += '<div class="ibacordotcom-vid-box-user"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK"><span id="ibacordotcom-user-img"></span> <span class="ibacordotcom-uploader">' + a.items[0].snippet.channelTitle + '</span></a><h4 class="pull-right"> Numero de vistas ' + addCommas(viewc) + '</h4></div></div>';
         b += '<div class="ibacordotcom-vid-box"><i class="fa fa-clock-o"> <span>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</span></i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> ' + addCommas(likc) + '</i><hr>' + urlify(desc).replace(/\n/g, '<br>') + '<br></div>';
         gplus(e, g);
-        $('.ibacordotcom_vid_play').html(b)
+        $('.gc_tv_play').html(b)
     })
 }
 
