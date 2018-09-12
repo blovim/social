@@ -33,7 +33,7 @@ function youtube_video_list(f, g, h, j, k, l) {
             var b = c.items[i].snippet.resourceId.videoId;
             getwaktu(b, i, g);
             d += '<div class="row valign-wrapper popular_item" data-vvv="' + b + '"><div class="col s4 p_img"><img src="' + c.items[i].snippet.thumbnails.default.url + '" class="responsive-img" alt="ibacor" style="display: block;"></div>';
-            d += '<div class="col s8 p_content"><a href="#!" class="disabled">'+ c.items[i].snippet.title + '</a><span class="black_text ' + i + '" style="display: block;"></span></div></div>'
+            d += '<div class="col s8 p_content"><a href="#!" class="disabled">'+ c.items[i].snippet.title + '</a><span class="time black_text' + i + '" style="display: block;"></span></div></div>'
         });
         d += '</div>';
         $('.ibacordotcom_youtube_channels').html(d);
