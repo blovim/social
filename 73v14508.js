@@ -79,8 +79,8 @@ function youtube_det(c, d, e, g) {
             desc = a.items[0].snippet.localized.description;
         b += '<iframe src="https://www.youtube.com/embed/' + c + '" allowfullscreen="" frameborder="0" class="ibacordotcom-vid-iframe"></iframe>';
         b += '<div class="row author_area"><div class="col s8 author"><div class="col s12 media_body"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</div></div><div class="col s4 views">' + addCommas(viewc) + 'vistas</div></div>';
-        b += '<div class="post_heding_aea"><span class="post_heding">' + judul + '</span><p>' + addCommas(likc) + '</i><hr>' + urlify(desc).replace(/\n/g, '<br>') + '</p></div>';
-        b += '<div class="ibacordotcom-vid-box"><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> </div>';
+        b += '<div class="post_heding_aea"><span class="post_heding">' + judul + '</span><p>' + urlify(desc).replace(/\n/g, '<br>') + '</p></div>';
+        b += '<div class="ibacordotcom-vid-box"><i class="fa fa-thumbs-down pull-left">' + addCommas(likc) + '</i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> </div>';
         gplus(e, g);
         $('.gc_tv_play').html(b)
     })
