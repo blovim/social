@@ -77,8 +77,8 @@ function youtube_det(c, d, e, g) {
             category = '',
             judul = a.items[0].snippet.localized.title,
             desc = a.items[0].snippet.localized.description;
-        b += '<iframe src="https://www.youtube.com/embed/' + c + '" allowfullscreen="" frameborder="0"></iframe>';
-        b += '<div class="row author_area"><div class="col s8 author"><div class="col s12 media_body"><a href="https://www.youtube.com/channel/' + d + '&rel=0" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</div></div><div class="col s4 views">' + addCommas(viewc) + ' vistas</div></div>';
+        b += '<iframe src="https://www.youtube.com/embed/' + c + '&rel=0" allowfullscreen="" frameborder="0"></iframe>';
+        b += '<div class="row author_area"><div class="col s8 author"><div class="col s12 media_body"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</div></div><div class="col s4 views">' + addCommas(viewc) + ' vistas</div></div>';
         b += '<div class="post_heding_aea"><span class="post_heding">' + judul + '</span><p>' + urlify(desc).replace(/\n/g, '<br>') + '</p></div>';
         b += '<div class="ibacordotcom-vid-box"><i class="fa fa-thumbs-down pull-left">' + addCommas(likc) + '</i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> </div>';
         gplus(e, g);
