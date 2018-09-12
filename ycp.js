@@ -4,8 +4,9 @@
 * URL: https://www.blovim.com/
 * VERSION: 18/1089
 ***********************************************/
-
-var apikey='AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0'; //YOUR GOOGLE API KEY
+var channels_name='GaranCom',
+    channels_title='Garantías Comunitarias',
+    apikey='AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0'; //YOUR GOOGLE API KEY
 
 $.ajax({
     url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername=' + channels_name + '&key=' + apikey,
