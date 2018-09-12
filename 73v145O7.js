@@ -107,7 +107,7 @@ function getwaktu(c, i, g) {
 			menit = '00';
 			detik = dataw[1].replace('S','');
 		}
-        $('.ibacordotcom-vid-tm' + i).html(menit + ':' + detik)
+        $('.black_text' + i).html(menit + ':' + detik)
     })
 }
 
