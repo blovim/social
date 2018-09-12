@@ -77,8 +77,8 @@ function youtube_det(c, d, e, g) {
             category = '',
             judul = a.items[0].snippet.localized.title,
             desc = a.items[0].snippet.localized.description;
-        b += '<iframe src="https://www.youtube.com/embed/' + c + '" allowfullscreen="" frameborder="0" class="ibacordotcom-vid-iframe"></iframe>';
-        b += '<div class="row author_area"><div class="col s8 author"><div class="col s12 media_body"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</div></div><div class="col s4 views">' + addCommas(viewc) + 'vistas</div></div>';
+        b += '<iframe src="https://www.youtube.com/embed/' + c + '" allowfullscreen="" frameborder="0"></iframe>';
+        b += '<div class="row author_area"><div class="col s8 author"><div class="col s12 media_body"><a href="https://www.youtube.com/channel/' + d + '&rel=0" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</div></div><div class="col s4 views">' + addCommas(viewc) + ' vistas</div></div>';
         b += '<div class="post_heding_aea"><span class="post_heding">' + judul + '</span><p>' + urlify(desc).replace(/\n/g, '<br>') + '</p></div>';
         b += '<div class="ibacordotcom-vid-box"><i class="fa fa-thumbs-down pull-left">' + addCommas(likc) + '</i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> </div>';
         gplus(e, g);
@@ -142,25 +142,25 @@ function _timeSince(a) {
     var s = Math.floor((new Date() - a) / 1000),
         i = Math.floor(s / 31536000);
     if (i > 1) {
-        return "hace " + i + " año(s)"
+        return "Publicado hace " + i + " año(s)"
     }
     i = Math.floor(s / 2592000);
     if (i > 1) {
-        return "hace " + i + " mes(es)"
+        return "Publicado hace " + i + " mes(es)"
     }
     i = Math.floor(s / 86400);
     if (i > 1) {
-        return "hace " + i + " día(s)"
+        return "Publicado hace " + i + " día(s)"
     }
     i = Math.floor(s / 3600);
     if (i > 1) {
-        return "hace " + i + " hora(s)"
+        return "Publicado hace " + i + " hora(s)"
     }
     i = Math.floor(s / 60);
     if (i > 1) {
-        return "hace " + i + " minuto(s)"
+        return "Publicado hace " + i + " minuto(s)"
     }
-    return "hace " + Math.floor(s) + " segundo(s)"
+    return "Publicado hace " + Math.floor(s) + " segundo(s)"
 }
 
 function addCommas(nStr){
