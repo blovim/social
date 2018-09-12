@@ -79,7 +79,7 @@ function youtube_det(c, d, e, g) {
             desc = a.items[0].snippet.localized.description;
         b += '<iframe src="https://www.youtube.com/embed/' + c + '" allowfullscreen="" frameborder="0" class="ibacordotcom-vid-iframe"></iframe>';
         b += '<div class="post_heding_aea"><span class="post_heding">' + judul + '</span>';
-        b += '<div class="ibacordotcom-vid-box-user"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK"><span id="ibacordotcom-user-img"></span> <span class="ibacordotcom-uploader">' + a.items[0].snippet.channelTitle + '</span></a><h4 class="pull-right"> Numero de vistas ' + addCommas(viewc) + '</h4></div></div>';
+        b += '<div class="by_author"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a> Numero de vistas ' + addCommas(viewc) + '</div></div>';
         b += '<div class="ibacordotcom-vid-box"><i class="fa fa-clock-o"> <span>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</span></i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> ' + addCommas(likc) + '</i><hr>' + urlify(desc).replace(/\n/g, '<br>') + '<br></div>';
         gplus(e, g);
         $('.gc_tv_play').html(b)
