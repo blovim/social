@@ -32,13 +32,13 @@ function youtube_video_list(f, g, h, j, k, l) {
         $.each(c.items, function(i, a) {
             var b = c.items[i].snippet.resourceId.videoId;
             getwaktu(b, i, g);
-            d += '<div class="ibacordotcom-play" data-vvv="' + b + '"><div class="ibacordotcom_youtube_thumb"><img src="' + c.items[i].snippet.thumbnails.default.url + '" alt="ibacor"><span class="ibacordotcom-vid-tm' + i + '"></span></div>';
-            d += c.items[i].snippet.title + '</div>'
+            d += '<div class="row valign-wrapper popular_item" data-vvv="' + b + '"><div class="col s4 p_img"><img src="' + c.items[i].snippet.thumbnails.default.url + '" class="responsive-img" alt="ibacor"><span class="ibacordotcom-vid-tm' + i + '"></span></div>';
+            d += '<div class=""><a href="#!" class="disabled">'+ c.items[i].snippet.title + '</a></div>'
         });
         d += '</div>';
         $('.ibacordotcom_youtube_channels').html(d);
         if (c.prevPageToken == null) {
-            var e = $(".ibacordotcom-play").attr("data-vvv");
+            var e = $(".popular_item").attr("data-vvv");
             youtube_det(e, k, l, g)
         }
         if (c.prevPageToken != null) {
@@ -53,11 +53,11 @@ function youtube_video_list(f, g, h, j, k, l) {
             youtube_video_list(f, g, a, j, k, l);
             return false
         });
-        $(".ibacordotcom-play").each(function() {
+        $(".popular_item").each(function() {
             $(this).click(function() {
                 var a = $(this).attr("data-vvv");
-                $('div').removeClass('ibacordotcom-vid-active');
-                $(this).addClass('ibacordotcom-vid-active');
+                $('div').removeClass('item-active');
+                $(this).addClass('item-active');
                 youtube_det(a, k, l, g);
                 return false
             })
@@ -77,10 +77,9 @@ function youtube_det(c, d, e, g) {
             category = '',
             judul = a.items[0].snippet.localized.title,
             desc = a.items[0].snippet.localized.description;
-        b += '<iframe src="https://www.youtube.com/embed/' + c + '?rel=0" allowfullscreen="" frameborder="0"></iframe>';
+        b += '<iframe src="https://www.youtube.com/embed/' + c + '?rel=0" frameborder="0"></iframe>';
         b += '<div class="row author_area"><div class="col s8 author"><div class="col s12 media_body"><a href="https://www.youtube.com/channel/' + d + '" target="_BLANK">' + a.items[0].snippet.channelTitle + '</a>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</div></div><div class="col s4 views">' + addCommas(viewc) + ' vistas</div></div>';
         b += '<div class="post_heding_aea"><span class="post_heding">' + judul + '</span><p>' + urlify(desc).replace(/\n/g, '<br>') + '</p></div>';
-        b += '<div class="ibacordotcom-vid-box"><i class="fa fa-thumbs-down pull-left">' + addCommas(likc) + '</i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> </div>';
         gplus(e, g);
         $('.gc_tv_play').html(b)
     })
